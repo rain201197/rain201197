@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Art Store</title>
+
+   <link href="style.css" rel="stylesheet">
+   <link href="style2.css" rel="stylesheet">
+
+</head>
+<body>
+
+<header>
+    <div id="topHeaderRow" >
+        <nav >
+            <ul >
+                <li><a href="#"> My Account</a></li>
+                           
+            </ul>
+        </nav>
+   </div>   <!-- end topHeaderRow -->
+   
+   <div id="logoRow" >
+        <h1>Art Store</h1> 
+   </div>  <!-- end logoRow -->
+   
+   <div id="mainNavigationRow" >
+         <nav >
+             <ul>
+              
+               <li><a href="#">Artists</a></li>
+             </ul>              
+
+         </nav>
+   </div>  <!-- end mainNavigationRow -->
+   
+</header>
+
+<main>
+
+   <h2>Customer Registration</h2>
+   <form method= 'post' action="http://localhost/assignment-one/php/execute.php">
+
+	<fieldset>
+
+      <h3>1. User Info</h3>
+      <table class="userform">
+         <tr>
+            <td><label>First Name</label><br><input type="text" name="fname" size="20"></td>
+	    <td><label>Last Name</label><br><input type="text" name="lname" size="20"></td
+         </tr>
+           
+        <tr>
+	<td>
+       <label>Email: </label><br/>
+	<input type="email" name="myemail"/>
+	</td>
+    	 </tr>    
+	 <tr>
+        <td><label>Password: </label><br/>
+	<input type="password" name="mypassword"/> </td>
+	<td><label>Password repeat: </label><br/>
+	<input type="password repeat" name="mypassword"/> </td>
+    	 </tr>     
+     	 </table>
+      
+      <h3>2. Location</h3>
+
+ <table class="Location">
+         <tr>
+            <td><label>Address</label><br><input type="text" name="loc" size="20"></td>
+         </tr>
+           
+        <tr>
+	<td>
+       <label>City: </label><br/>
+	<input type="City" name="City"/>
+	</td>
+	<td>
+       <label>State: </label><br/>
+	<input type="text" name="Sta"/>
+	</td>
+	<td>
+       <label>Zip: </label><br/>
+	<input type="Zip" name="Zip"/>
+	</td>
+    	 </tr>  
+     	 </table>
+
+<p>
+       <label>Continent: </label><br/>
+	<input type= "radio" name="cont" value="North America" > North America <br/>
+	<input type= "radio" name="cont" value="Europe" > Europe <br/>
+	<input type= "radio" name="cont" value="South America" checked > South America <br/>
+     </p>   
+     
+      <h3>3. Personal Details</h3>
+<table>
+	<tr>
+	<label for="birthday">Birthday:</label>
+	<input type="date" id="birthday" name="birthday">
+	</tr>
+	
+	<tr>
+        <label for="favcolor">Favorite color:</label>
+	<input type="color" id="favcolor" name="favcolor" value="#ff0000">
+	</tr>
+	
+	<td><label> Interest in Art </label></tr></td>
+        
+	<td><p> minimal </p></td>
+	
+	<td> 
+	<div class="slidecontainer">
+  	<input type="range" min="1" max="100" value="50" class="slider" id="myRange" name="myRange">
+	</div>
+	</td>
+	
+	<td><p> Love it! </p></td>
+
+</table>
+      
+      <h3>4. Done</h3>
+	<p>  
+	<label> I accept the Terms of the Site </label>
+	<input type= "checkbox" name= "accept">
+	</p>
+       
+	<table>
+<button>
+<img src="C:\Users\renee\OneDrive\Documents\web app\apache-tomcat-10.0.0-M9-windows-x64\apache-tomcat-10.0.0-M9\webapps\assignment one\images\button_ok.png" alt="button ok">
+Sign me up! 	
+ 	 
+</button>
+	</table>
+ 
+ 
+
+	</fieldset>
+ </form>
+
+</main>
+
+
+  </body>
+</html>
