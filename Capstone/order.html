@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Important to make website responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website</title>
+
+    <!-- Link our CSS file -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navbar Section Starts Here -->
+    <section class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#" title="Logo">
+                    <img src="images/logo.png" alt="Restaurant Logo" class="img-responsive">
+                </a>
+            </div>
+
+            <div class="menu text-right">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="categories.html">Categories</a>
+                    </li>
+                    <li>
+                        <a href="foods.html">Foods</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="clearfix"></div>
+        </div>
+    </section>
+    <!-- Navbar Section Ends Here -->
+
+    <!-- fOOD sEARCH Section Starts Here -->
+    
+    <section class="food-search">
+        <div class="container">
+            
+            <h2 class="text-center text-white">Fill this form to confirm your order.</h2>
+
+            <form method= 'POST' action="http://localhost/Capstone/php/execution2.php" class="order">
+                <fieldset id="add_to_me">
+                    <legend>Selected Food</legend>
+
+                    <div class="food-menu-img">
+                        <img src="images/hat.jpg" alt="hat" class="img-responsive img-curve">
+                    </div>
+                
+                    <div class="food-menu-desc">
+                        <h3>Food Title</h3>
+                        <p class="food-price">Price is in CHF</p>
+                
+                        <div class="order-label">Quantity</div>
+            
+                        <input type="number" name="qty1" class="input-responsive" value="1" required>
+                    
+                    </div>
+                   
+                   
+                    <div class="order-label">Order 
+                        
+                        <select id="Order1" name="Order1">
+                          <option value="Breakfast">Breakfast </option>
+                          <option value="Lunch">Lunch</option>
+                          <option value="Dessert">Dessert</option>
+                        </select>
+        
+                      </div>
+                    
+
+                      <div class="order-label">Option
+                        <select id="option1" name="option1">
+                          <option value="option1">Option 1</option>
+                          <option value="option2">Option 2</option>
+                          <option value="option3">Option 3</option>
+                          <option value="option4">Option 4</option>
+                        </select>
+                      </div>
+                      <button onclick="addCode()">Add Menu</button>
+                      <script>
+                          var counter = 1;
+                          function addCode() {
+                              if (counter < 5) {
+                                counter++;
+                                document.getElementById("add_to_me").innerHTML += 
+                                
+                                    "<br/><br/><br/>" +
+
+                                    "<div class=\"food-menu-img\">" +
+                                    "<img src=\"images/hat.jpg\" alt=\"hat\" class=\"img-responsive img-curve\">" +
+                                    "</div>" +
+
+                                    "<div class=\"food-menu-desc\">" +
+                                    "<h3>Food Title</h3>" +
+                                    "<p class=\"food-price\">Price is in CHF</p>" +
+
+                                    "<div class=\"order-label\">Quantity</div>" +
+                                    "<input type=\"number\" name=\"qty"+ counter +"\" class=\"input-responsive\" value=\"1\" required>" + 
+        
+                                    "</div>" +
+
+                                    "<div class=\"order-label\">Order" +
+                                        "<select id=\"Order"+ counter +"\" name=\"Order"+ counter +"\">" +
+                                            "<option value=\"Breakfast\">Breakfast </option>" +
+                                            "<option value=\"Lunch\">Lunch</option>" +
+                                            "<option value=\"Dessert\">Dessert</option>" +
+                                            "</select>" +
+                                            "</div>" +
+
+                                            "<div class=\"order-label\">Option" +
+                                                "<select id=\"option"+ counter +"\" name=\"option"+ counter +"\">" +
+                                                    "<option value=\"option1\">Option 1</option>" +
+                                                    "<option value=\"option2\">Option 2</option>" +
+                                                    "<option value=\"option3\">Option 3</option>" +
+                                                    "<option value=\"option4\">Option 4</option>" +
+                                                    "</select>" +
+                                                    "</div>;" 
+                                }
+                                
+                          }
+                      </script>
+
+
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Delivery Details</legend>
+                    <div class="order-label">Full Name</div>
+                    <input type="text" name="fullnm" placeholder="E.g. Dogan Guven" size="20" class="input-responsive" required>
+
+                    <div class="order-label">Phone Number</div>
+                    <input type="tel" name="phonenumber" placeholder="E.g. 5050xxxxxx" size="20" class="input-responsive" required>
+
+                    <div class="order-label">Email</div>
+                    <input type="email" name="emailad" placeholder="E.g. dogan@Guven.com" size="40" class="input-responsive" required>
+
+                    <div class="order-label">Address</div>
+                    <textarea name="homeaddress" rows="10" placeholder="E.g. Street, City, Country" size="20" class="input-responsive" required></textarea>
+
+                    <div class="order-label">Payment choice
+                        <select id="payment" name="payment">
+                          <option value="option1">Credit Card</option>
+                          <option value="option2">Cash</option>
+                          <option value="option3">Twint</option>
+                          
+                        </select>
+                      </div>
+                      
+                    <input type="submit" name="submit" value="Confirm Order" class="btn btn-primary">
+
+                </fieldset>
+            
+            </form>
+
+        </div>
+    </section>
+    <!-- fOOD sEARCH Section Ends Here -->
+
+    <!-- social Section Starts Here -->
+    <section class="social">
+        <div class="container text-center">
+            <ul>
+                <li>
+                    <a href="#"><img src="https://img.icons8.com/fluent/50/000000/facebook-new.png"/></a>
+                </li>
+                <li>
+                    <a href="#"><img src="https://img.icons8.com/fluent/48/000000/instagram-new.png"/></a>
+                </li>
+                <li>
+                    <a href="#"><img src="https://img.icons8.com/fluent/48/000000/twitter.png"/></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- social Section Ends Here -->
+
+    <!-- footer Section Starts Here -->
+    <section class="footer">
+        <div class="container text-center">
+            <p>VEGGIE VAST FOOD ORDER DELIVERY</p>
+        </div>
+    </section>
+    <!-- footer Section Ends Here -->
+
+</body>
+</html>
